@@ -39,4 +39,5 @@
     
 (2) 通用字段
 
-![通用字段]（https://github.com/sakura521/wifi-/blob/master/photo/通用字段.png）
+![通用字段](https://github.com/sakura521/wifi-/blob/master/photo/通用字段.png)
+![微信邮箱字段](https://github.com/sakura521/wifi-/blob/master/photo/微信邮箱字段.png)
