@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>springcloud2_root</artifactId>
+        <groupId>com.uestc.springcloud2</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>springcloud2_hbasequery</artifactId>
+
+    <name>springcloud2_hbasequery</name>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+    </properties>
+
+    <dependencies>
+        <!--spring common依赖-->
+        <dependency>
+            <groupId>com.uestc.springcloud2</groupId>
+            <artifactId>springcloud2_common</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <!--基础服务hbase依赖-->
+        <dependency>
+            <groupId>com.uestc.bigdata</groupId>
+            <artifactId>hbase</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
+
+</project>

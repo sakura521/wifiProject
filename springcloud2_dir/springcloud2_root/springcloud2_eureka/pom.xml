@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>springcloud2_root</artifactId>
+        <groupId>com.uestc.springcloud2</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>springcloud2_eureka</artifactId>
+
+    <name>springcloud2_eureka</name>
+
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.uestc.springcloud2</groupId>
+            <artifactId>springcloud2_common</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
+        <!--用户验证-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+            <version>1.4.1.RELEASE</version>
+        </dependency>
+    </dependencies>
+
+
+
+
+    <build>
+        <plugins>
+            <plugin><!--打包依赖的jar包-->
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <configuration>
+                    <outputDirectory>${project.build.directory}/lib</outputDirectory>
+                    <excludeTransitive>false</excludeTransitive> <!-- 表示是否不包含间接依赖的包 -->
+                    <stripVersion>false</stripVersion> <!-- 去除版本信息 -->
+                </configuration>
+
+                <executions>
+                    <execution>
+                        <id>copy-dependencies</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>copy-dependencies</goal>
+                        </goals>
+                        <configuration>
+                            <!-- 拷贝项目依赖包到lib/目录下 -->
+                            <outputDirectory>${project.build.directory}/jars</outputDirectory>
+                            <excludeTransitive>false</excludeTransitive>
+                            <stripVersion>false</stripVersion>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+
+
+            <!-- 打成jar包插件 -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>2.4</version>
+                <configuration>
+                    <archive>
+                        <!--
+                        生成的jar中，不要包含pom.xml和pom.properties这两个文件
+                    -->
+                        <addMavenDescriptor>false</addMavenDescriptor>
+                        <!-- 生成MANIFEST.MF的设置 -->
+                        <manifest>
+                            <!-- 为依赖包添加路径, 这些路径会写在MANIFEST文件的Class-Path下 -->
+                            <addClasspath>true</addClasspath>
+                            <classpathPrefix>jars/</classpathPrefix>
+                            <!-- jar启动入口类-->
+                            <mainClass>com.cn.springcloud.dnax.eureka.EurekaApplication</mainClass>
+                        </manifest>
+                        <manifestEntries>
+                            <!-- 在Class-Path下添加配置文件的路径 -->
+                            <Class-Path></Class-Path>
+                        </manifestEntries>
+                    </archive>
+                    <outputDirectory>${project.build.directory}/</outputDirectory>
+                    <includes>
+                        <!-- 打jar包时，只打包class文件 -->
+                        <include>**/*.class</include>
+                        <include>**/*.properties</include>
+                        <include>**/*.yml</include>
+                    </includes>
+                </configuration>
+            </plugin>
+
+        </plugins>
+
+    </build>
+</project>

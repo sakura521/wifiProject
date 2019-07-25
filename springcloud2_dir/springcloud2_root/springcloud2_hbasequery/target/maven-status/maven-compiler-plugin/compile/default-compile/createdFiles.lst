@@ -1,0 +1,3 @@
+com\cn\tzspringcloud2\hbase\HbaseApplication.class
+com\cn\tzspringcloud2\hbase\service\HbaseBaseService.class
+com\cn\tzspringcloud2\hbase\controller\HbaseBaseController.class

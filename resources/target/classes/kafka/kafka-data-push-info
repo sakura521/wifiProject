@@ -1,0 +1,33 @@
+--config                            kafka自动推送数据配置目录
+--timeOut                           推送超时时间    默认 15 min  单位为分钟
+
+kafka自动推送数据配置：
+data.sources                        数据源列表。  （例如：data.sources =bhdb1,dpxx）  
+
+{source}.source.type                某个数据源的类型。 （数据源分为数据库和文件两大类， 若为数据库 则使用 数据的名称 例如 oracle,mysql,sqlserver等， 否则使用 file）
+                                                                                                            例如：bhdb1.source.type=oracle 或者  dpxx.source.type=file
+数据源为数据库：
+{source}.db.name                    数据库的名称
+{source}.db.host                    数据库的ip或者主机名
+{source}.db.port                    数据库的访问端口， 若不填写则使用该种数据库的默认端口
+{source}.db.user                    用户名
+{source}.db.pwd                     密码                                                                 
+{source}.push.topic                 推送到topic的全局配置，即该数据库下配置的表没有配置topic的时候，其数据会推送到该topic。   
+{source}.push.tables                需要推送数的表列表 
+{source}.{table}.push.sql           只推送使用该sql查询到的数据    。       不填则表示推送全部。
+{source}.{table}.push.adjusterfactory 对推送的数据进行调整  ， 必须为com.bh.d406.bigdata.kafka.producer.DataAdjuster的子类   ，  需要进行调整数据的时候填写
+{source}.{table}.push.topic         该表的数据推送到topic名称  ， 若不填则使用全局的topic配置
+
+数据源为文件：
+{source}.file.dir                   文件目录    （注意：只支持本地目录 ）    
+{source}.file.encoding              文件编码      （默认UTF-8）
+{source}.file.extensions            需要过滤的文件格式列表
+{source}.file.data.loaderfactory    文件加载器工厂类   
+{source}.file.data.fields           记录的字段列表      与顺序有关
+{source}.file.data.spliter          数据的分割符         默认 \t
+{source}.file.skip.firstline        是否跳过第一行数据                       false  or true
+{source}.file.data.adjusterfactory  数据矫正工厂类
+{source}.push.thread.num            读取文件的线程数
+{source}.push.batch.size            分批推送数据 ， 每批数据大小
+{source}.push.topic                 数据推送的目标topic名称
+{source}.store.table                存储的表名

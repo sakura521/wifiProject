@@ -1,0 +1,5 @@
+com\uestc\bigdata\kafka\Config\KafkaConfig.class
+com\uestc\bigdata\App.class
+com\uestc\bigdata\kafka\Test.class
+com\uestc\bigdata\kafka\producer\StringProducer.class
+com\uestc\bigdata\kafka\producer\StringProducer$TaskProducer.class

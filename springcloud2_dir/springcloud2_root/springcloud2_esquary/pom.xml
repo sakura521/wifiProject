@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>springcloud2_root</artifactId>
+        <groupId>com.uestc.springcloud2</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>springcloud2_esquary</artifactId>
+    <name>springcloud2_esquary</name>
+
+    <dependencies>
+        <!--eureka依赖-->
+        <dependency>
+            <groupId>com.uestc.springcloud2</groupId>
+            <artifactId>springcloud2_common</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <!--ES基础依赖-->
+        <dependency>
+            <groupId>com.uestc.bigdata</groupId>
+            <artifactId>es</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <!--<exclusions>
+                <exclusion>
+                    <artifactId>slf4j-log4j12</artifactId>
+                    <groupId>org.slf4j</groupId>
+                </exclusion>
+            </exclusions>-->
+        </dependency>
+
+        <!--微服务间相互调用 feign-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-feign</artifactId>
+            <exclusions>
+                <!--<exclusion>
+                    <artifactId>logback-classic</artifactId>
+                    <groupId>ch.qos.logback</groupId>
+                </exclusion>
+                <exclusion>
+                    <artifactId>log4j-over-slf4j</artifactId>
+                    <groupId>org.slf4j</groupId>
+                </exclusion>-->
+                <exclusion>
+                    <artifactId>HdrHistogram</artifactId>
+                    <groupId>org.hdrhistogram</groupId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+    </dependencies>
+
+</project>

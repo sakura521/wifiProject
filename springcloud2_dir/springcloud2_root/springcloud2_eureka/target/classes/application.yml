@@ -1,0 +1,14 @@
+security:
+  basic:
+    enabled: true
+  user:
+    name: root
+    password: root
+server:
+  port: 8765
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://root:root@localhost:8765/eureka/
