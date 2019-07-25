@@ -37,7 +37,7 @@
     
     mail_source2222_32132137.txt
     
-(2) 通用字段
+(2) 具体字段信息
 
 ![通用字段](https://github.com/sakura521/wifi-/blob/master/photo/通用字段.png)
 ![微信邮箱字段](https://github.com/sakura521/wifi-/blob/master/photo/微信邮箱字段.png)
