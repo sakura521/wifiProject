@@ -22,10 +22,18 @@
 
 
 项目数据结构：
+
 (1) 日志文件命名
+
 数据类型_来源_UUID.txt ：
+
   如BASE_SOURCE_UUID.txt
+  
     wechat_source1_1111160.txt
+    
     qq_source1_21111221.txt
+    
     mail_source2222_32132137.txt
+    
 (2) 通用字段
+
