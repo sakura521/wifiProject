@@ -13,3 +13,4 @@
 ![image](https://github.com/sakura521/wifi-/blob/master/photo/项目框架图.png)
 
 具体的项目说明请看文档：项目介绍
+每个部分的数据运行结果以及集群的运行状况见结果文件ProjectResult！！！
