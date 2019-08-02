@@ -1,0 +1,25 @@
+{
+  "_source": {
+    "enabled": true
+  },
+  "properties": {
+    "imei":{"type": "keyword"},
+    "imsi":{"type": "keyword"},
+    "longitude":{"type": "double"},
+    "latitude":{"type": "double"},
+    "phone_mac":{"type": "text","fields": {"keyword": {"ignore_above": 256,"type": "keyword"}}},
+    "device_mac":{"type": "text","fields": {"keyword": {"ignore_above": 256,"type": "keyword"}}},
+    "device_number":{"type": "text","fields": {"keyword": {"ignore_above": 256,"type": "keyword"}}},
+    "collect_time":{"type": "long"},
+    "username":{"type": "text","fields": {"keyword": {"ignore_above": 256,"type": "keyword"}}},
+    "phone":{"type": "text","fields": {"keyword": {"ignore_above": 256,"type": "keyword"}}},
+    "object_username":{"type": "text","fields": {"keyword": {"ignore_above": 256,"type": "keyword"}}},
+    "send_message":{"type": "text","fields": {"keyword": {"ignore_above": 256,"type": "keyword"}}},
+    "accept_message":{"type": "text","fields": {"keyword": {"ignore_above": 256,"type": "keyword"}}},
+    "message_time":{"type": "long"},
+     "id":{"type": "keyword"},
+    "table":{"type": "keyword"},
+    "filename":{"type": "text","fields": {"keyword": {"ignore_above": 256,"type": "keyword"}}},
+    "absolute_filename":{"type": "text","fields": {"keyword": {"ignore_above": 256,"type": "keyword"}}}
+  }
+}

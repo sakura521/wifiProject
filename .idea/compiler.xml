@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="common" />
+        <module name="es" />
+        <module name="flume" />
+        <module name="hbase" />
+        <module name="kafka" />
+        <module name="resources" />
+        <module name="spark" />
+        <module name="springcloud2_common" />
+        <module name="springcloud2_esquary" />
+        <module name="springcloud2_eureka" />
+        <module name="springcloud2_hbasequery" />
+      </profile>
+    </annotationProcessing>
+  </component>
+</project>

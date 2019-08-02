@@ -1,0 +1,9 @@
+com\uestc\bigdata\flume\Test.class
+com\uestc\bigdata\App.class
+com\uestc\bigdata\flume\inceperctor\DataInceptor$Builder.class
+com\uestc\bigdata\flume\sink\FlumeSink.class
+com\uestc\bigdata\flume\flumesource\FlumeSource.class
+com\uestc\bigdata\flume\fileutil\FileUtil.class
+com\uestc\bigdata\flume\constant\FlumeconfConstant.class
+com\uestc\bigdata\flume\fields\MapFields.class
+com\uestc\bigdata\flume\inceperctor\DataInceptor.class
