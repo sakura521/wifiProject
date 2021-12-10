@@ -102,7 +102,7 @@
         <dependency>
             <groupId>org.apache.logging.log4j</groupId>
             <artifactId>log4j-api</artifactId>
-            <version>RELEASE</version>
+            <version>2.15.0</version>
             <scope>compile</scope>
         </dependency>
         <dependency>
